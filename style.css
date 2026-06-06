@@ -12,6 +12,16 @@ body {
   line-height: 1.7;
   color: #60463B;
   background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-padding-top: 120px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 /* ── Header ── */
@@ -21,6 +31,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+  width: min(1120px, calc(100% - 32px));
   background-color: rgba(96, 70, 59, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -29,6 +40,7 @@ header {
   padding: 12px 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 32px;
   white-space: nowrap;
 }
@@ -78,7 +90,7 @@ nav a:hover {
 
 /* ── Sections ── */
 section {
-  padding: 60px;
+  padding: clamp(44px, 7vw, 80px) clamp(20px, 6vw, 60px);
   max-width: 900px;
   margin: 0 auto;
 }
@@ -99,16 +111,16 @@ section h2 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 60px 60px 0px;
-  max-width: 700px;
+  padding: clamp(40px, 7vw, 60px) clamp(20px, 6vw, 60px) 0;
+  max-width: min(700px, 100%);
   margin: 60px auto;
   background-color: transparent;
   border-radius: 20px;
 }
 
 #about img {
-  width: 250px;
-  height: 250px;
+  width: clamp(160px, 32vw, 250px);
+  height: clamp(160px, 32vw, 250px);
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #856A5D;
@@ -120,14 +132,14 @@ section h2 {
 .about-card {
   background-color: #856A5D;
   border-radius: 20px;
-  padding: 100px 60px 60px;
+  padding: clamp(84px, 14vw, 100px) clamp(24px, 7vw, 60px) clamp(36px, 7vw, 60px);
   margin-top: -80px;
   width: 100%;
 }
 
 .hero-greeting {
   font-family: 'Playfair Display', serif;
-  font-size: 52px;
+  font-size: clamp(34px, 7vw, 52px);
   font-weight: 700;
   color: #5A2A27;
   margin-bottom: 12px;
@@ -156,6 +168,7 @@ section h2 {
   line-height: 1.8;
   max-width: 560px;
   font-weight: 400;
+  margin: 0 auto;
 }
 
 /* ── Projects ── */
@@ -197,7 +210,7 @@ section h2 {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 20px;
   max-width: 900px;
   margin: 0 auto;
@@ -271,7 +284,7 @@ section h2 {
 
 .experience-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   flex: 1;
 }
@@ -454,6 +467,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 24px;
 }
@@ -503,6 +517,17 @@ footer {
 .card-header:hover { background: rgba(0,0,0,0.1); }
 
 .card-header-left { flex: 1; }
+
+.card-description,
+.section-text,
+.feature-desc,
+.skill-desc,
+.exp-desc,
+.testimonial-quote,
+.testimonial-role,
+.footer-links a {
+  overflow-wrap: anywhere;
+}
 
 .card-title-row {
   display: flex;
@@ -694,9 +719,183 @@ footer {
 }
 
 /* ── Responsive ── */
-@media (max-width: 500px) {
-  .features-grid { grid-template-columns: 1fr; }
-  .stats-row { grid-template-columns: 1fr 1fr; }
-  .card-header { padding: 18px; }
-  .section { padding: 18px; }
+@media (max-width: 900px) {
+  header {
+    gap: 18px;
+    padding: 12px 18px;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .experience-layout {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .exp-photo {
+    width: min(100%, 420px);
+    height: auto;
+    aspect-ratio: 4 / 5;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 760px) {
+  main {
+    padding-top: 118px;
+  }
+
+  header {
+    top: 12px;
+    border-radius: 24px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .github-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  #about {
+    margin-top: 20px;
+  }
+
+  #projects,
+  #skills,
+  #experience,
+  #testimonials {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .experience-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 560px) {
+  main {
+    padding-top: 150px;
+  }
+
+  header {
+    width: calc(100% - 20px);
+    padding: 12px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .github-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  section h2 {
+    font-size: 24px;
+  }
+
+  .about-card {
+    border-radius: 16px;
+    margin-top: -64px;
+  }
+
+  .hero-role {
+    font-size: 16px;
+  }
+
+  .hero-bio {
+    font-size: 15px;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    padding: 18px;
+  }
+
+  .card-title-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .section {
+    padding: 18px;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .testimonial-card::before {
+    font-size: 84px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .footer-links span {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  main {
+    padding-top: 170px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav a {
+    font-size: 11px;
+  }
+
+  .hero-greeting {
+    font-size: 30px;
+  }
+
+  .card-header {
+    gap: 10px;
+  }
+
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
 }
