@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Card Template</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #0f0f0f;
+      color: #e8e8e0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    /* ── Card ── */
+    .card {
+      width: 100%;
+      max-width: 720px;
+      background: #1a1a1a;
+      border: 1px solid #2e2e2e;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* ── Card Header ── */
+    .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 24px 28px;
+      cursor: pointer;
+      user-select: none;
+      gap: 16px;
+    }
+
+    .card-header:hover { background: #1e1e1e; }
+
+    .card-header-left { flex: 1; }
+
+    .card-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #f0f0e8;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid;
+    }
+
+    /* Status badge variants — change class on .badge */
+    .badge-completed {
+      background: rgba(34, 197, 94, 0.1);
+      border-color: rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+    }
+    .badge-in-progress {
+      background: rgba(251, 191, 36, 0.1);
+      border-color: rgba(251, 191, 36, 0.3);
+      color: #fbbf24;
+    }
+    .badge-planned {
+      background: rgba(148, 163, 184, 0.1);
+      border-color: rgba(148, 163, 184, 0.3);
+      color: #94a3b8;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .card-description {
+      font-size: 14px;
+      color: #999;
+      line-height: 1.6;
+      margin-bottom: 14px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-family: 'DM Mono', monospace;
+      background: #252525;
+      border: 1px solid #333;
+      color: #bbb;
+      padding: 3px 10px;
+      border-radius: 6px;
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      color: #555;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 4px;
+      line-height: 1;
+      transition: color 0.2s, transform 0.3s;
+      flex-shrink: 0;
+    }
+
+    .card.open .toggle-btn { transform: rotate(180deg); color: #888; }
+
+    /* ── Card Body ── */
+    .card-body {
+      display: none;
+      border-top: 1px solid #2a2a2a;
+    }
+
+    .card.open .card-body { display: block; }
+
+    /* ── Sections ── */
+    .section {
+      padding: 24px 28px;
+      border-bottom: 1px solid #222;
+    }
+
+    .section:last-child { border-bottom: none; }
+
+    .section-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 10px;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .section-text {
+      font-size: 14px;
+      color: #bbb;
+      line-height: 1.7;
+    }
+
+    /* ── Features Grid ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .feature-card {
+      background: #222;
+      border: 1px solid #2e2e2e;
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .feature-icon {
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .feature-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #e0e0d8;
+      margin-bottom: 4px;
+    }
+
+    .feature-desc {
+      font-size: 12px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* ── Stats Row ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .stat-card {
+      background: #222;
+      border: 1px solid #2e2e2e;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .stat-value {
+      font-size: 26px;
+      font-weight: 600;
+      color: #f0f0e8;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .outcome-text {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.7;
+      margin-top: 14px;
+      font-style: italic;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 500px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .card-header { padding: 18px 18px; }
+      .section { padding: 18px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="projectCard">
+
+    <!-- ── HEADER (always visible) ── -->
+    <div class="card-header" onclick="toggleCard()">
+      <div class="card-header-left">
+        <div class="card-title-row">
+
+          <!-- Project name -->
+          <span class="card-title">Your Project Name</span>
+
+          <!-- Status badge: swap class to badge-completed / badge-in-progress / badge-planned -->
+          <span class="badge badge-completed">
+            <span class="badge-dot"></span>
+            Completed
+          </span>
+
+        </div>
+
+        <!-- Short one-liner description -->
+        <p class="card-description">
+          A short one-sentence description of what your project does and who it's for.
+        </p>
+
+        <!-- Tech stack tags -->
+        <div class="tags">
+          <span class="tag">Language</span>
+          <span class="tag">Framework</span>
+          <span class="tag">Database</span>
+          <span class="tag">Platform</span>
+        </div>
+      </div>
+
+      <button class="toggle-btn" aria-label="Toggle details">&#8964;</button>
+    </div>
+
+    <!-- ── BODY (shown when expanded) ── -->
+    <div class="card-body">
+
+      <!-- THE PROBLEM -->
+      <div class="section">
+        <p class="section-label">The Problem</p>
+        <p class="section-text">
+          Describe the problem or gap your project addresses. Why did this need to be built?
+          What was missing or broken before your solution existed?
+        </p>
+      </div>
+
+      <!-- WHAT WAS BUILT -->
+      <div class="section">
+        <p class="section-label">What Was Built</p>
+        <p class="section-text">
+          Describe the solution in one or two sentences. What type of app is it?
+          What's the core approach or architecture?
+        </p>
+
+        <!-- Feature cards — add or remove as needed -->
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon">🏠</div>
+            <div class="feature-title">Feature One</div>
+            <div class="feature-desc">Brief description of what this feature does.</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <div class="feature-title">Feature Two</div>
+            <div class="feature-desc">Brief description of what this feature does.</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">👤</div>
+            <div class="feature-title">Feature Three</div>
+            <div class="feature-desc">Brief description of what this feature does.</div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📁</div>
+            <div class="feature-title">Feature Four</div>
+            <div class="feature-desc">Brief description of what this feature does.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- THE OUTCOME -->
+      <div class="section">
+        <p class="section-label">The Outcome</p>
+
+        <!-- Stats — edit the numbers and labels -->
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-value">00</div>
+            <div class="stat-label">stat label here</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">00</div>
+            <div class="stat-label">stat label here</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">—</div>
+            <div class="stat-label">stat label here</div>
+          </div>
+        </div>
+
+        <!-- Closing summary sentence -->
+        <p class="outcome-text">
+          One or two sentences summarizing the impact or result of the project.
+          What changed? What can users now do that they couldn't before?
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function toggleCard() {
+      document.getElementById('projectCard').classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

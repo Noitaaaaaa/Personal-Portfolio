@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ron Syrel | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header>
+    <h1>Ron Syrel</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+    </nav>
+        <a href="https://github.com/Noitaaaaaa" class="github-btn" target="_blank">Visit GitHub</a>
+</header>
+
+  <main>
+
+    <section id="about">
+  <img src="profile.jpg" alt="Profile photo" />
+  <div class="about-card">
+    <h1 class="hero-greeting">Hello, I'm <span>Ron Syrel</span></h1>
+    <p class="hero-role">IT Student <span class="hero-role-muted">based in Manila</span></p>
+    <p class="hero-bio">I'm an IT student, but "student" is just my current title. I build real things, I solve real problems, and I'm working toward a career at the top of this industry — one project at a time.</p>
+  </div>
+</section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <!-- ── CARD 1: Nakachi Tracker ── -->
+      <div class="card" id="projectCard">
+        <div class="card-header" onclick="toggleCard()">
+          <div class="card-header-left">
+            <div class="card-title-row">
+              <span class="card-title">Nakachi Tracker</span>
+              <span class="badge badge-completed">
+                <span class="badge-dot"></span>
+                Completed
+              </span>
+            </div>
+            <p class="card-description">A full featured desktop logistics management system for trucking application.</p>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Desktop App</span>
+            </div>
+          </div>
+          <button class="toggle-btn">&#8964;</button>
+        </div>
+
+        <div class="card-body">
+          <div class="section">
+            <p class="section-label">The Problem</p>
+            <p class="section-text">The truck company had a problem with tracking and managing their logistics operations. This app was built to compress all of that work into one application, where everything will be seen clearly without having to skim through papers.</p>
+          </div>
+
+          <div class="section">
+            <p class="section-label">What Was Built</p>
+            <p class="section-text">A desktop application wherein all operations are streamlined and managed in one place.</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">🧭</div>
+                <div class="feature-title">Dashboard</div>
+                <div class="feature-desc">Provides a comprehensive overview of all logistics operations.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">👤</div>
+                <div class="feature-title">Profiles</div>
+                <div class="feature-desc">Allows Owners, Clients, Helpers and Drivers to check their personal information and history.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <div class="feature-title">Trucks and Maintenance</div>
+                <div class="feature-desc">Allows users to manage their fleet and maintenance schedules.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📁</div>
+                <div class="feature-title">Reports</div>
+                <div class="feature-desc">Allows users to view various logistics reports compiled from the data in the system.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <p class="section-label">Outcome</p>
+            <p class="outcome-text">Foreseeing entire operations and seeing where and how the income and expenses are distributed became easier.</p>
+          </div>
+        </div>
+      </div>
+      <!-- ── END CARD 1 ── -->
+
+      <!-- ── CARD 2: Personal Portfolio ── -->
+      <div class="card" id="projectCard2" style="margin-top: 20px;">
+        <div class="card-header" onclick="toggleCard2()">
+          <div class="card-header-left">
+            <div class="card-title-row">
+              <span class="card-title">Personal Portfolio</span>
+              <span class="badge badge-in-progress">
+                <span class="badge-dot"></span>
+                In Progress
+              </span>
+            </div>
+            <p class="card-description">A personal portfolio website to showcase my projects, skills, and background as an IT student.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <button class="toggle-btn">&#8964;</button>
+        </div>
+
+        <div class="card-body">
+          <div class="section">
+            <p class="section-label">The Problem</p>
+            <p class="section-text">As an IT student building real projects, there was no one place to present my work professionally just scattered files and repos with no context or story behind them.</p>
+          </div>
+
+          <div class="section">
+            <p class="section-label">What Was Built</p>
+            <p class="section-text">A responsive personal portfolio site built from scratch using pure HTML and CSS without using any frameworks or templates.</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">🧑‍💻</div>
+                <div class="feature-title">Hero Profile</div>
+                <div class="feature-desc">Centered profile photo, greeting, role, and bio to add presence to the profile.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📂</div>
+                <div class="feature-title">Project Cards</div>
+                <div class="feature-desc">Expandable cards with problem, features, and outcomes.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Custom Styling</div>
+                <div class="feature-desc">Hand-written CSS with a refined black and cream theme.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📬</div>
+                <div class="feature-title">Contact Section</div>
+                <div class="feature-desc">Direct links to email and GitHub.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <p class="section-label">The Outcome</p>
+            <p class="outcome-text">A clean, professional home for my work — built entirely by hand as a project in itself.</p>
+          </div>
+        </div>
+      </div>
+      <!-- ── END CARD 2 ── -->
+
+    </section>
+
+    <section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="skill-icon">☕</div>
+      <div class="skill-name">Java</div>
+      <div class ="skill-proficiency">Intermediate</div>
+      <div class="skill-desc">OOP, Swing GUI, JDBC, desktop apps</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">HTML</div>
+      <div class ="skill-proficiency">Intermediate</div>
+      <div class="skill-desc">Semantic structure, forms, accessibility</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">🗄️</div>
+      <div class="skill-name">SQLite</div>
+      <div class ="skill-proficiency">Basic</div>
+      <div class="skill-desc">Relational databases, queries, data management</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">🎨</div>
+      <div class="skill-name">CSS</div>
+      <div class ="skill-proficiency">Basic</div>
+      <div class="skill-desc">Layouts, flexbox, grid, responsive design</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">🐍</div>
+      <div class="skill-name">Python</div>
+      <div class ="skill-proficiency">Beginner</div>
+      <div class="skill-desc">Basic syntax, loops, functions, OOP fundamentals</div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-icon">⚙️</div>
+      <div class="skill-name">JavaScript</div>
+      <div class ="skill-proficiency">Still Learning</div>
+      <div class="skill-desc">N/A</div>
+    </div>
+
+  </div>
+</section>
+
+    <section id="experience">
+  <h2>Experience</h2>
+  <div class="experience-layout">
+
+    <div class="experience-grid">
+
+      <div class="exp-card">
+        <div class="exp-icon">💻</div>
+        <h3 class="exp-title">Desktop Development</h3>
+        <p class="exp-duration">1 Project</p>
+        <p class="exp-desc">Built a full logistics management system for a trucking company using Java and SQLite.</p>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon">🌐</div>
+        <h3 class="exp-title">Web Development</h3>
+        <p class="exp-duration">In Progress</p>
+        <p class="exp-desc">Currently building and designing websites from scratch using HTML, CSS, and JavaScript.</p>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon">🗄️</div>
+        <h3 class="exp-title">Database Management</h3>
+        <p class="exp-duration">1 Year</p>
+        <p class="exp-desc">Experienced with relational databases, writing queries, and managing data with SQLite and JDBC.</p>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-icon">🎓</div>
+        <h3 class="exp-title">IT Student</h3>
+        <p class="exp-duration">2nd Year</p>
+        <p class="exp-desc">Currently studying Information Technology with a focus on software development and systems design.</p>
+      </div>
+
+    </div>
+
+    <img src="profile.jpg" alt="Ron Syrel" class="exp-photo" />
+
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>Testimonials</h2>
+
+  <div class="testimonial-card">
+    <p class="testimonial-quote">"Nakachi Tracker made work easier and much more efficient."</p>
+    <div class="testimonial-author">
+      <div class="testimonial-info">
+        <p class="testimonial-name">Susan Magpantay</p>
+        <p class="testimonial-role">Manager of Nakachi Gajitos Investments</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  </main>
+
+ <footer>
+  <div class="footer-content">
+    <p class="footer-name">Ron Syrel</p>
+    <p class="footer-tagline">IT Student · Manila, Philippines</p>
+    <div class="footer-links">
+      <a href="mailto:noita1525@gmail.com">noita1525@gmail.com</a>
+      <span>·</span>
+      <a href="https://github.com/Noitaaaaaa" target="_blank">GitHub</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Ron Syrel</p>
+  </div>
+</footer>
+
+  <script>
+    function toggleCard() {
+      document.getElementById('projectCard').classList.toggle('open');
+    }
+    function toggleCard2() {
+      document.getElementById('projectCard2').classList.toggle('open');
+    }
+  </script>
+
+</body>
+
+</html>
