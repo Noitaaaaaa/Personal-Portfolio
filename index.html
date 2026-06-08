@@ -8,32 +8,78 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
   <header>
-    <h1>Ron Syrel</h1>
+     <a href="#about" class="nav-name">Ron Syrel</a>
     <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
     </nav>
         <a href="https://github.com/Noitaaaaaa" class="github-btn" target="_blank">Visit GitHub</a>
 </header>
 
   <main>
 
-    <section id="about">
-  <img src="profile.jpg" alt="Profile photo" />
-  <div class="about-card">
-    <h1 class="hero-greeting">Hello, I'm <span>Ron Syrel</span></h1>
-    <p class="hero-role">IT Student <span class="hero-role-muted">based in Manila</span></p>
+  <section id="about">
+  <div class="hero-left">
+    <div class="hero-image-block">
+  <span class="hero-letter">S</span>
+  <img src="profilefixed.png" alt="Ron Syrel" />
+  <h1 class="hero-name">Ron Syrel</h1>
+  <p class="hero-label">IT STUDENT // BASED IN MANILA</p>
+</div>
+  </div>
+
+  <div class="hero-right">
+    <h2 class="hero-greeting">
+      Turning your ideas into applications.
+    </h2>
     <p class="hero-bio">I'm an IT student, but "student" is just my current title. I build real things, I solve real problems, and I'm working toward a career at the top of this industry — one project at a time.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="hero-btn">VIEW MY PROJECTS →</a>
+    </div>
+    <div class="hero-links">
+      <a href="resume.pdf" target="_blank">RESUME</a>
+      <a href="https://www.linkedin.com/in/ron-syrel-magpantay-4061253ba/" target="_blank">LINKEDIN</a>
+      <a href="https://github.com/Noitaaaaaa" target="_blank">GITHUB</a>
+    </div>
   </div>
 </section>
 
+<section id="Statistics">
+  <div class="stats-grid">
+    <div class="stats-card">
+      <div class="stats-icon"><i class="fa-solid fa-laptop-code"></i></div>
+      <div class="stats-number">4</div>
+      <div class="stats-label">Projects Built</div>
+      
+    </div>
+    <div class="stats-card">
+      <div class="stats-icon"><i class="fa-solid fa-terminal"></i></div>
+      <div class="stats-number">5</div>
+      <div class="stats-label">Programming Languages</div>
+    </div>
+    <div class="stats-card">
+      <div class="stats-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+      <div class="stats-number">2</div>
+      <div class="stats-label">Years of Experience</div>
+    </div>
+    <div class="stats-card">
+      <div class="stats-icon"><i class="fa-solid fa-user"></i></div>
+      <div class="stats-number">1</div>
+      <div class="stats-label">Clients Satisfied</div>
+    </div>
+  </div>
+</section>
     <section id="projects">
       <h2>Projects</h2>
 
@@ -42,10 +88,10 @@
         <div class="card-header" onclick="toggleCard()">
           <div class="card-header-left">
             <div class="card-title-row">
-              <span class="card-title">Nakachi Tracker</span>
-              <span class="badge badge-completed">
-                <span class="badge-dot"></span>
-                Completed
+              <span class="card-title">Nakachi Tracker🚛</span>
+              <span class="badge badge-deployed">
+              <span class="badge-dot"></span>
+               Deployed
               </span>
             </div>
             <p class="card-description">A full featured desktop logistics management system for trucking application.</p>
@@ -104,7 +150,7 @@
         <div class="card-header" onclick="toggleCard2()">
           <div class="card-header-left">
             <div class="card-title-row">
-              <span class="card-title">Personal Portfolio</span>
+              <span class="card-title">Personal Portfolio📄</span>
               <span class="badge badge-in-progress">
                 <span class="badge-dot"></span>
                 In Progress
@@ -160,6 +206,131 @@
         </div>
       </div>
       <!-- ── END CARD 2 ── -->
+       <!-- ── CARD 3: Catinder ── -->
+<div class="card" id="projectCard3" style="margin-top: 20px;">
+  <div class="card-header" onclick="toggleCard3()">
+    <div class="card-header-left">
+      <div class="card-title-row">
+        <span class="card-title">Catinder😻</span>
+        <span class="badge badge-completed">
+          <span class="badge-dot"></span>
+          Completed
+        </span>
+      </div>
+      <p class="card-description">A Tinder-style desktop app for cats — swipe right to like, left to skip, built entirely in Java Swing.</p>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">Swing GUI</span>
+        <span class="tag">Desktop App</span>
+        <span class="tag">OOP</span>
+      </div>
+    </div>
+    <button class="toggle-btn">&#8964;</button>
+  </div>
+
+  <div class="card-body">
+    <div class="section">
+      <p class="section-label">The Problem</p>
+      <p class="section-text">A fun challenge to build a fully animated, interactive GUI application from scratch without using any external libraries — just pure Java Swing and custom rendering.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">What Was Built</p>
+      <p class="section-text">A desktop app that simulates a swipe-based dating app UI rendered entirely with Java's Graphics2D engine.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🐱</div>
+          <div class="feature-title">Cat Profiles</div>
+          <div class="feature-desc">60+ handcrafted cat profiles with names, bios, ages, locations, and images.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👆</div>
+          <div class="feature-title">Swipe Animation</div>
+          <div class="feature-desc">Smooth card swipe with eased rotation and fade, triggered by buttons or keyboard arrows.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">Custom Renderer</div>
+          <div class="feature-desc">Entire UI drawn with Graphics2D — phone frame, cards, photos, stamps, and action buttons.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⌨️</div>
+          <div class="feature-title">Keyboard Controls</div>
+          <div class="feature-desc">Left and right arrow keys to skip or like, in addition to on-screen buttons.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-label">Outcome</p>
+      <p class="outcome-text">A fully functional, polished GUI app that demonstrates low-level Java rendering, animation timers, OOP design, and custom component painting — no frameworks needed.</p>
+    </div>
+  </div>
+</div>
+<!-- ── END CARD 3 ── -->
+
+<!-- ── CARD 4: Augustore ── -->
+<div class="card" id="projectCard4" style="margin-top: 20px;">
+  <div class="card-header" onclick="toggleCard4()">
+    <div class="card-header-left">
+      <div class="card-title-row">
+        <span class="card-title">Augustore 🏬</span>
+        <span class="badge badge-completed">
+          <span class="badge-dot"></span>
+          Completed
+        </span>
+      </div>
+      <p class="card-description">A fully interactive command-line department store system with categories, brands, a shopping cart, and payment processing.</p>
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">OOP</span>
+        <span class="tag">CLI</span>
+        <span class="tag">Inheritance</span>
+      </div>
+    </div>
+    <button class="toggle-btn">&#8964;</button>
+  </div>
+
+  <div class="card-body">
+    <div class="section">
+      <p class="section-label">The Problem</p>
+      <p class="section-text">Simulate a real department store experience entirely in the terminal — with multiple brands, product sizes, stock tracking, a cart, and two payment methods — using nothing but pure Java.</p>
+    </div>
+
+    <div class="section">
+      <p class="section-label">What Was Built</p>
+      <p class="section-text">A CLI shopping system with 6 product categories, 48 brands, and hundreds of products — all navigable by number or by typing words naturally.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🏪</div>
+          <div class="feature-title">6 Categories & 48 Brands</div>
+          <div class="feature-desc">Clothing, Beauty, Home, Electronics, Sports, and Toys — each with multiple real-world brand stores.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗣️</div>
+          <div class="feature-title">Natural Word Input</div>
+          <div class="feature-desc">Type "shirt", "medium", "cart", or "cash" — the app understands plurals, aliases, and flexible phrasing.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛒</div>
+          <div class="feature-title">Full Cart System</div>
+          <div class="feature-desc">Add, remove, and adjust quantities with live stock tracking and subtotal calculation.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧾</div>
+          <div class="feature-title">Payment & Receipts</div>
+          <div class="feature-desc">Pay by card or cash with change computation, and print itemized receipts for all sessions.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <p class="section-label">Outcome</p>
+      <p class="outcome-text">A complete OOP-designed system demonstrating inheritance, polymorphism, abstraction, and encapsulation — all in a single, fully working Java program.</p>
+    </div>
+  </div>
+</div>
+<!-- ── END CARD 4 ── -->
 
     </section>
 
@@ -169,56 +340,56 @@
   <div class="skills-grid">
 
     <div class="skill-card">
-      <div class="skill-icon">☕</div>
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" /></div>
       <div class="skill-name">Java</div>
       <div class ="skill-proficiency">Intermediate</div>
       <div class="skill-desc">OOP, Swing GUI, JDBC, desktop apps</div>
     </div>
 
     <div class="skill-card">
-      <div class="skill-icon">🌐</div>
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML" /></div>
       <div class="skill-name">HTML</div>
       <div class ="skill-proficiency">Intermediate</div>
       <div class="skill-desc">Semantic structure, forms, accessibility</div>
     </div>
 
     <div class="skill-card">
-      <div class="skill-icon">🗄️</div>
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="SQLite" /></div>
       <div class="skill-name">SQLite</div>
       <div class ="skill-proficiency">Basic</div>
       <div class="skill-desc">Relational databases, queries, data management</div>
     </div>
 
     <div class="skill-card">
-      <div class="skill-icon">🎨</div>
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS" /></div>
       <div class="skill-name">CSS</div>
       <div class ="skill-proficiency">Basic</div>
       <div class="skill-desc">Layouts, flexbox, grid, responsive design</div>
     </div>
 
     <div class="skill-card">
-      <div class="skill-icon">🐧</div>
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux" /></div>
       <div class="skill-name">Linux/Kali</div>
       <div class ="skill-proficiency">Beginner</div>
       <div class="skill-desc">Command-line interface, file management, Bash</div>
     </div>
 
     <div class="skill-card">
-      <div class="skill-icon">🐍</div>
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" /></div>
       <div class="skill-name">Python</div>
       <div class ="skill-proficiency">Beginner</div>
       <div class="skill-desc">Basic syntax, loops, functions, OOP fundamentals</div>
     </div>
 
     <div class="skill-card">
-      <div class="skill-icon">⚙️</div>
+      <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
       <div class="skill-name">JavaScript</div>
       <div class ="skill-proficiency">Still Learning</div>
       <div class="skill-desc">N/A</div>
     </div>
 
     <div class="skill-card">    
-        <div class="skill-icon">📊</div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL" /></div>
         <div class="skill-name">MySQL</div>
         <div class ="skill-proficiency">Still Learning</div>
         <div class="skill-desc">N/A</div>
@@ -262,9 +433,6 @@
       </div>
 
     </div>
-
-    <img src="profile.jpg" alt="Ron Syrel" class="exp-photo" />
-
   </div>
 </section>
 
@@ -272,11 +440,12 @@
   <h2>Testimonials</h2>
 
   <div class="testimonial-card">
-    <p class="testimonial-quote">"Nakachi Tracker made work easier and much more efficient."</p>
+    <p class="testimonial-quote">"
+The program is very helpful to us. It tracks everything from our booking, our people, our income and our expenses. For a company who has several truck owners it helped us to see what is going-on real time. This level of transparency helps improve coordination, enchance efficiency, and quick addresses any issues that may arise."</p>
     <div class="testimonial-author">
       <div class="testimonial-info">
-        <p class="testimonial-name">Susan Magpantay</p>
-        <p class="testimonial-role">Manager of Nakachi Gajitos Investments</p>
+        <p class="testimonial-name">Susan Gajitos</p>
+        <p class="testimonial-role">Operations Manager of Nakachi Truck Rentals/p>
       </div>
     </div>
   </div>
@@ -285,26 +454,56 @@
 
   </main>
 
- <footer>
+ <footer id="contact">
   <div class="footer-content">
     <p class="footer-name">Ron Syrel</p>
     <p class="footer-tagline">IT Student · Manila, Philippines</p>
+    <p class="footer-contacts">Contact Me:</p>
     <div class="footer-links">
       <a href="mailto:noita1525@gmail.com">noita1525@gmail.com</a>
       <span>·</span>
       <a href="https://github.com/Noitaaaaaa" target="_blank">GitHub</a>
+      <span>·</span>
+      <a href="https://www.linkedin.com/in/ron-syrel-magpantay-4061253ba/" target="_blank">LinkedIn</a>
     </div>
     <p class="footer-copy">&copy; 2026 Ron Syrel</p>
   </div>
 </footer>
 
   <script>
-    function toggleCard() {
-      document.getElementById('projectCard').classList.toggle('open');
+     function toggleCard() {
+    document.getElementById('projectCard').classList.toggle('open');
     }
-    function toggleCard2() {
-      document.getElementById('projectCard2').classList.toggle('open');
+     function toggleCard2() {
+    document.getElementById('projectCard2').classList.toggle('open');
+   }
+   function toggleCard3() {
+  document.getElementById('projectCard3').classList.toggle('open');
     }
+    function toggleCard4() {
+  document.getElementById('projectCard4').classList.toggle('open');
+}
+  // ── Navbar fade on idle ──
+    const header = document.querySelector('header');
+    let hideTimer;
+
+    function showNav() {
+     header.classList.remove('nav-hidden');
+     clearTimeout(hideTimer);
+     hideTimer = setTimeout(() => {
+      header.classList.add('nav-hidden');
+    }, 2000);
+  }
+
+   document.addEventListener('mousemove', (e) => {
+    if (e.clientY < 120) {
+      showNav();
+    }
+  });
+  hideTimer = setTimeout(() => {  
+    header.classList.add('nav-hidden');
+  }, 2000);
+
   </script>
 
 </body>
