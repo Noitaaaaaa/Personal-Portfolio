@@ -573,6 +573,31 @@ heroBtn.addEventListener('mousemove', (e) => {
   heroBtn.style.setProperty('--y', `${e.clientY - rect.top}px`);
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('.contact-btn');
+
+    btn.textContent = 'SENDING...';
+    btn.disabled = true;
+
+    const res = await fetch('https://formspree.io/f/xlgknejp', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+
+    if (res.ok) {
+      btn.textContent = '✓ MESSAGE SENT';
+      form.reset();
+    } else {
+      btn.textContent = 'FAILED — TRY AGAIN';
+      btn.disabled = false;
+    }
+  });
+});
+
   </script>
 
 </body>
