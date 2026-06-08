@@ -57,28 +57,34 @@
 
 <section id="Statistics">
   <div class="stats-grid">
-    <div class="stats-card">
-      <div class="stats-icon"><i class="fa-solid fa-laptop-code"></i></div>
-      <div class="stats-number">4</div>
-      <div class="stats-label">Projects Built</div>
-      
-    </div>
-    <div class="stats-card">
-      <div class="stats-icon"><i class="fa-solid fa-terminal"></i></div>
-      <div class="stats-number">5</div>
-      <div class="stats-label">Programming Languages</div>
-    </div>
+    <a href="#projects" class="stats-link">
+  <div class="stats-card">
+    <div class="stats-icon"><i class="fa-solid fa-laptop-code"></i></div>
+    <div class="stats-number">4</div>
+    <div class="stats-label">Projects Built</div>
+  </div>
+</a>
+    <a href="#skills" class="stats-link">
+  <div class="stats-card">
+    <div class="stats-icon"><i class="fa-solid fa-terminal"></i></div>
+    <div class="stats-number">5</div>
+    <div class="stats-label">Programming Languages</div>
+  </div>
+</a>
+  <a href="#testimonials" class="stats-link">
+  <div class="stats-card">
+    <div class="stats-icon"><i class="fa-solid fa-user"></i></div>
+    <div class="stats-number">1</div>
+    <div class="stats-label">Clients Satisfied</div>
+  </div>
+</a>
+
     <div class="stats-card">
       <div class="stats-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
       <div class="stats-number">2</div>
       <div class="stats-label">Years of Experience</div>
     </div>
-    <div class="stats-card">
-      <div class="stats-icon"><i class="fa-solid fa-user"></i></div>
-      <div class="stats-number">1</div>
-      <div class="stats-label">Clients Satisfied</div>
-    </div>
-  </div>
+    
 </section>
     <section id="projects">
       <h2>Projects</h2>
@@ -458,7 +464,16 @@ The program is very helpful to us. It tracks everything from our booking, our pe
   <div class="footer-content">
     <p class="footer-name">Ron Syrel G. Magpantay</p>
     <p class="footer-tagline">IT Student · Manila, Philippines</p>
-    <p class="footer-contacts">Contact Me:</p>
+
+    <form class="contact-form" id="contact-form">
+      <div class="contact-row">
+        <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
+        <input type="email" id="contact-email" name="email" placeholder="Your Email" required />
+      </div>
+      <textarea id="contact-message" name="message" placeholder="Your message..." rows="5" required></textarea>
+      <button type="submit" class="contact-btn">SEND MESSAGE →</button>
+    </form>
+
     <div class="footer-links">
       <a href="mailto:noita1525@gmail.com">noita1525@gmail.com</a>
       <span>·</span>
@@ -503,6 +518,60 @@ The program is very helpful to us. It tracks everything from our booking, our pe
   hideTimer = setTimeout(() => {  
     header.classList.add('nav-hidden');
   }, 2000);
+
+ // ── Active nav highlight ──
+const sections = document.querySelectorAll('section, footer');
+const navLinks = document.querySelectorAll('nav a');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const active = document.querySelector(`nav a[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, {
+  rootMargin: '-40% 0px -55% 0px'
+});
+
+const footerObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => link.classList.remove('active'));
+      const active = document.querySelector('nav a[href="#contact"]');
+      if (active) active.classList.add('active');
+    }
+  });
+}, {
+  rootMargin: '0px 0px 0px 0px'
+});
+
+sections.forEach(s => {
+  if (s.id === 'contact') {
+    footerObserver.observe(s);
+  } else {
+    observer.observe(s);
+  }
+});
+
+window.addEventListener('scroll', () => {
+  const atBottom = window.innerHeight + window.scrollY >= document.body.scrollHeight - 10;
+  if (atBottom) {
+    navLinks.forEach(link => link.classList.remove('active'));
+    const active = document.querySelector('nav a[href="#contact"]');
+    if (active) active.classList.add('active');
+  }
+});
+
+// ── Button spotlight effect ──
+const heroBtn = document.querySelector('.hero-btn');
+heroBtn.addEventListener('mousemove', (e) => {
+  const rect = heroBtn.getBoundingClientRect();
+  heroBtn.style.setProperty('--x', `${e.clientX - rect.left}px`);
+  heroBtn.style.setProperty('--y', `${e.clientY - rect.top}px`);
+});
 
   </script>
 
