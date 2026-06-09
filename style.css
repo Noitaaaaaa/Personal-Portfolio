@@ -576,19 +576,20 @@ section h2 {
 }
 
 .skill-card {
-  background: #60463b;
-  border: 1.5px solid #856a5d;
+  background: #60463B;
+  border: 1.5px solid #856A5D;
   border-radius: 16px;
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .skill-card:hover {
-  box-shadow: 0 4px 20px rgba(96, 70, 59, 0.3);
+  box-shadow: 0 8px 28px rgba(96, 70, 59, 0.35);
+  transform: translateY(-4px);
 }
 
 .skill-icon img {
@@ -651,15 +652,35 @@ section h2 {
 }
 
 .exp-card {
-  border: 1.5px solid #856a5d;
+  border: 1.5px solid #856A5D;
   border-radius: 16px;
   padding: 24px;
-  background: #60463b;
-  transition: box-shadow 0.2s;
+  background: #60463B;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .exp-card:hover {
-  box-shadow: 0 4px 20px rgba(90, 42, 39, 0.3);
+  box-shadow: 0 8px 28px rgba(90, 42, 39, 0.35);
+  transform: translateY(-4px);
+}
+
+.skill-card,
+.exp-card,
+.testimonial-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::before,
+.exp-card::before,
+.testimonial-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #856A5D, #EEDEC5);
 }
 
 .exp-icon {
@@ -753,6 +774,11 @@ article a:hover {
   padding: 40px;
   border: 1px solid #856a5d;
   position: relative;
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 8px 28px rgba(90, 42, 39, 0.35);
+  transform: translateY(-4px);
 }
 
 .testimonial-quote {
