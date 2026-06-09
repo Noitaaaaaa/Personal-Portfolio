@@ -433,6 +433,97 @@ section h2 {
   }
 }
 
+/* ── Services ── */
+
+#services {
+  max-width: 100%;
+  padding: 80px 60px;
+}
+
+#services h2 {
+  border-bottom: 3px solid #856A5D;
+  display: inline-block;
+  padding-bottom: 4px;
+  color: #60463B;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin: 32px auto 0;
+  max-width: 900px;
+}
+
+.service-card {
+  background: #60463B;
+  border: 1.5px solid #856A5D;
+  border-radius: 16px;
+  padding: 36px 32px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #856A5D, #EEDEC5);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(96, 70, 59, 0.35);
+}
+
+.service-icon {
+  font-size: 28px;
+  color: #EEDEC5;
+  margin-bottom: 16px;
+}
+
+.service-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #EEDEC5;
+  margin-bottom: 12px;
+}
+
+.service-desc {
+  font-size: 15px;
+  color: rgba(238, 222, 197, 0.7);
+  font-weight: 300;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.service-list li {
+  font-size: 14px;
+  color: rgba(238, 222, 197, 0.6);
+  padding-left: 16px;
+  position: relative;
+}
+
+.service-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: #856A5D;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* ── Projects ── */
 #projects {
   max-width: 100%;
@@ -634,7 +725,7 @@ article a:hover {
 /* ── Testimonials ── */
 #testimonials {
   max-width: 100%;
-  padding: 80px 60px;
+  padding: 80px 60px 200px;
 }
 
 #testimonials h2 {

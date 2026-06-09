@@ -18,6 +18,7 @@
      <a href="#about" class="nav-name">Ron Syrel</a>
     <nav>
         <a href="#about">About</a>
+        <a href="#services">Services</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#experience">Experience</a>
@@ -33,7 +34,7 @@
   <div class="hero-left">
     <div class="hero-image-block">
   <span class="hero-letter">S</span>
-  <img src="profilefixed.png" alt="Ron Syrel" />
+  <img src="profile4.png" alt="Ron Syrel" />
   <h1 class="hero-name">Ron Syrel</h1>
   <p class="hero-label">IT STUDENT // BASED IN MANILA</p>
 </div>
@@ -86,6 +87,36 @@
     </div>
     
 </section>
+
+<section id="services">
+  <h2>Services</h2>
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-globe"></i></div>
+      <h3 class="service-title">Web Development</h3>
+      <p class="service-desc">Custom websites built from your ideas from the ground up. Regular consultations to ensure your vision is realized and made.</p>
+      <ul class="service-list">
+        <li>Portfolio & profile sites</li>
+        <li>Business landing pages</li>
+        <li>UI design & layout</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon"><i class="fa-solid fa-desktop"></i></div>
+      <h3 class="service-title">Desktop Applications</h3>
+      <p class="service-desc">Desktop applications to make your business operations more efficient and streamlined. Digitalized your processes and modernized your workflow.</p>
+      <ul class="service-list">
+        <li>Management systems</li>
+        <li>Data tracking & reporting</li>
+        <li>Custom business tools</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
     <section id="projects">
       <h2>Projects</h2>
 
@@ -533,25 +564,11 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  rootMargin: '-40% 0px -55% 0px'
-});
-
-const footerObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.classList.remove('active'));
-      const active = document.querySelector('nav a[href="#contact"]');
-      if (active) active.classList.add('active');
-    }
-  });
-}, {
-  rootMargin: '0px 0px 0px 0px'
+  rootMargin: '-20% 0px -70% 0px'
 });
 
 sections.forEach(s => {
-  if (s.id === 'contact') {
-    footerObserver.observe(s);
-  } else {
+  if (s.id !== 'contact') {
     observer.observe(s);
   }
 });
@@ -564,7 +581,6 @@ window.addEventListener('scroll', () => {
     if (active) active.classList.add('active');
   }
 });
-
 // ── Button spotlight effect ──
 const heroBtn = document.querySelector('.hero-btn');
 heroBtn.addEventListener('mousemove', (e) => {
