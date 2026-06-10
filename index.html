@@ -35,14 +35,14 @@
     <header>
       <a href="#about" class="nav-name"> Ron Syrel </a>
       <nav>
-        <a href="#about"> About </a>
-        <a href="#services"> Services </a>
-        <a href="#projects"> Projects </a>
-        <a href="#skills"> Skills </a>
-        <a href="#experience"> Experience </a>
-        <a href="#testimonials"> Testimonials </a>
-        <a href="#contact"> Contact </a>
-      </nav>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="index.html#skills">Skills</a>
+  <a href="index.html#experience">Experience</a>
+  <a href="index.html#testimonials">Testimonials</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="works.html" class="nav-separator">My Works</a>
+</nav>
       <a
         href="https://github.com/Noitaaaaaa"
         class="github-btn"
@@ -63,7 +63,7 @@
             <span class="hero-letter"> S </span>
             <img src="profile4.png" alt="Ron Syrel" />
             <h1 class="hero-name">Ron Syrel</h1>
-            <p class="hero-label">IT STUDENT // BASED IN MANILA</p>
+            <p class="hero-label">FULL-STACK DEVELOPER // BASED IN MANILA</p>
           </div>
         </div>
         <div class="hero-right">
@@ -98,7 +98,7 @@
               <div class="stats-icon">
                 <i class="fa-solid fa-laptop-code"> </i>
               </div>
-              <div class="stats-number">4</div>
+              <div class="stats-number">2</div>
               <div class="stats-label">Projects Built</div>
             </div>
           </a>
@@ -172,342 +172,48 @@
 
     <!-- Projects Section -->
       <section id="projects">
-        <h2>Projects</h2>
-        <!-- ── CARD 1: Nakachi Tracker ── -->
-        <div class="card" id="projectCard">
-          <div class="card-header" onclick="toggleCard()">
-            <div class="card-header-left">
-              <div class="card-title-row">
-                <span class="card-title"> Nakachi Tracker🚛 </span>
-                <span class="badge badge-deployed">
-                  <span class="badge-dot"> </span>
-                  Deployed
-                </span>
+        <h2>Featured Projects</h2>
+        <div class="proj-grid">
+
+          <a href="works.html#project-1" class="proj-card">
+            <div class="proj-bg proj-bg--1"></div>
+            <div class="proj-overlay"></div>
+            <div class="proj-content">
+              <div class="proj-meta">
+                <span class="badge badge-deployed"><span class="badge-dot"></span>Deployed</span>
               </div>
-              <p class="card-description">
-                A full featured desktop logistics management system for trucking
-                application.
-              </p>
-              <div class="tags">
-                <span class="tag"> Java </span>
-                <span class="tag"> SQLite </span>
-                <span class="tag"> Desktop App </span>
+              <div class="proj-info">
+                <h3 class="proj-title">Nakachi Tracker</h3>
+                <p class="proj-desc">Full-featured desktop logistics system for Nakachi Truck Rentals.</p>
+                <div class="proj-tags">
+                  <span class="tag">Java</span><span class="tag">SQLite</span><span class="tag">Desktop App</span>
+                </div>
+                <span class="proj-cta">View project →</span>
               </div>
             </div>
-            <button class="toggle-btn">&#8964;</button>
-          </div>
-          <div class="card-body">
-            <div class="section">
-              <p class="section-label">The Problem</p>
-              <p class="section-text">
-                The truck company had a problem with tracking and managing their
-                logistics operations. This app was built to compress all of that
-                work into one application, where everything will be seen clearly
-                without having to skim through papers.
-              </p>
-            </div>
-            <div class="section">
-              <p class="section-label">What Was Built</p>
-              <p class="section-text">
-                A desktop application wherein all operations are streamlined and
-                managed in one place.
-              </p>
-              <div class="features-grid">
-                <div class="feature-card">
-                  <div class="feature-icon">🧭</div>
-                  <div class="feature-title">Dashboard</div>
-                  <div class="feature-desc">
-                    Provides a comprehensive overview of all logistics
-                    operations.
-                  </div>
+          </a>
+
+          <a href="works.html#project-2" class="proj-card">
+            <div class="proj-bg proj-bg--2"></div>
+            <div class="proj-overlay"></div>
+            <div class="proj-content">
+              <div class="proj-meta">
+                <span class="badge badge-deployed"><span class="badge-dot"></span>Deployed</span>
+              </div>
+              <div class="proj-info">
+                <h3 class="proj-title">Personal Portfolio</h3>
+                <p class="proj-desc">This site — built from scratch in pure HTML, CSS &amp; JS.</p>
+                <div class="proj-tags">
+                  <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
                 </div>
-                <div class="feature-card">
-                  <div class="feature-icon">👤</div>
-                  <div class="feature-title">Profiles</div>
-                  <div class="feature-desc">
-                    Allows Owners, Clients, Helpers and Drivers to check their
-                    personal information and history.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">🚚</div>
-                  <div class="feature-title">Trucks and Maintenance</div>
-                  <div class="feature-desc">
-                    Allows users to manage their fleet and maintenance
-                    schedules.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">📁</div>
-                  <div class="feature-title">Reports</div>
-                  <div class="feature-desc">
-                    Allows users to view various logistics reports compiled from
-                    the data in the system.
-                  </div>
-                </div>
+                <span class="proj-cta">View project →</span>
               </div>
             </div>
-            <div class="section">
-              <p class="section-label">Outcome</p>
-              <p class="outcome-text">
-                Foreseeing entire operations and seeing where and how the income
-                and expenses are distributed became easier.
-              </p>
-            </div>
-          </div>
+          </a>
         </div>
-        <!-- ── END CARD 1 ── -->
-        <!-- ── CARD 2: Personal Portfolio ── -->
-        <div class="card" id="projectCard2" style="margin-top: 20px">
-          <div class="card-header" onclick="toggleCard2()">
-            <div class="card-header-left">
-              <div class="card-title-row">
-                <span class="card-title"> Personal Portfolio📄 </span>
-                <span class="badge badge-deployed">
-                  <span class="badge-dot"> </span>
-                  Deployed
-                </span>
-              </div>
-              <p class="card-description">
-                A personal portfolio website to showcase my projects, skills,
-                and background as an IT student.
-              </p>
-              <div class="tags">
-                <span class="tag"> HTML </span>
-                <span class="tag"> CSS </span>
-                <span class="tag"> JavaScript </span>
-              </div>
-            </div>
-            <button class="toggle-btn">&#8964;</button>
-          </div>
-          <div class="card-body">
-            <div class="section">
-              <p class="section-label">The Problem</p>
-              <p class="section-text">
-                As an IT student building real projects, there was no one place
-                to present my work professionally just scattered files and repos
-                with no context or story behind them.
-              </p>
-            </div>
-            <div class="section">
-              <p class="section-label">What Was Built</p>
-              <p class="section-text">
-                A responsive personal portfolio site built from scratch using
-                pure HTML and CSS without using any frameworks or templates.
-              </p>
-              <div class="features-grid">
-                <div class="feature-card">
-                  <div class="feature-icon">🧑‍💻</div>
-                  <div class="feature-title">Hero Profile</div>
-                  <div class="feature-desc">
-                    Centered profile photo, greeting, role, and bio to add
-                    presence to the profile.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">📂</div>
-                  <div class="feature-title">Project Cards</div>
-                  <div class="feature-desc">
-                    Expandable cards with problem, features, and outcomes.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">🎨</div>
-                  <div class="feature-title">Custom Styling</div>
-                  <div class="feature-desc">
-                    Hand-written CSS with a refined black and cream theme.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">📬</div>
-                  <div class="feature-title">Contact Section</div>
-                  <div class="feature-desc">
-                    Direct links to email and GitHub.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section">
-              <p class="section-label">The Outcome</p>
-              <p class="outcome-text">
-                A clean, professional home for my work — built entirely by hand
-                as a project in itself.
-              </p>
-            </div>
-          </div>
+        <div style="text-align:center; margin-top: 32px;">
+          <a href="works.html" class="view-all-btn">View All Works →</a>
         </div>
-        <!-- ── END CARD 2 ── -->
-        <!-- ── CARD 3: Catinder ── -->
-        <div class="card" id="projectCard3" style="margin-top: 20px">
-          <div class="card-header" onclick="toggleCard3()">
-            <div class="card-header-left">
-              <div class="card-title-row">
-                <span class="card-title"> Catinder😻 </span>
-                <span class="badge badge-completed">
-                  <span class="badge-dot"> </span>
-                  Completed
-                </span>
-              </div>
-              <p class="card-description">
-                A Tinder-style desktop app for cats — swipe right to like, left
-                to skip, built entirely in Java Swing.
-              </p>
-              <div class="tags">
-                <span class="tag"> Java </span>
-                <span class="tag"> Swing GUI </span>
-                <span class="tag"> Desktop App </span>
-                <span class="tag"> OOP </span>
-              </div>
-            </div>
-            <button class="toggle-btn">&#8964;</button>
-          </div>
-          <div class="card-body">
-            <div class="section">
-              <p class="section-label">The Problem</p>
-              <p class="section-text">
-                A fun challenge to build a fully animated, interactive GUI
-                application from scratch without using any external libraries —
-                just pure Java Swing and custom rendering.
-              </p>
-            </div>
-            <div class="section">
-              <p class="section-label">What Was Built</p>
-              <p class="section-text">
-                A desktop app that simulates a swipe-based dating app UI
-                rendered entirely with Java's Graphics2D engine.
-              </p>
-              <div class="features-grid">
-                <div class="feature-card">
-                  <div class="feature-icon">🐱</div>
-                  <div class="feature-title">Cat Profiles</div>
-                  <div class="feature-desc">
-                    60+ handcrafted cat profiles with names, bios, ages,
-                    locations, and images.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">👆</div>
-                  <div class="feature-title">Swipe Animation</div>
-                  <div class="feature-desc">
-                    Smooth card swipe with eased rotation and fade, triggered by
-                    buttons or keyboard arrows.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">🎨</div>
-                  <div class="feature-title">Custom Renderer</div>
-                  <div class="feature-desc">
-                    Entire UI drawn with Graphics2D — phone frame, cards,
-                    photos, stamps, and action buttons.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">⌨️</div>
-                  <div class="feature-title">Keyboard Controls</div>
-                  <div class="feature-desc">
-                    Left and right arrow keys to skip or like, in addition to
-                    on-screen buttons.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section">
-              <p class="section-label">Outcome</p>
-              <p class="outcome-text">
-                A fully functional, polished GUI app that demonstrates low-level
-                Java rendering, animation timers, OOP design, and custom
-                component painting — no frameworks needed.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- ── END CARD 3 ── -->
-        <!-- ── CARD 4: Augustore ── -->
-        <div class="card" id="projectCard4" style="margin-top: 20px">
-          <div class="card-header" onclick="toggleCard4()">
-            <div class="card-header-left">
-              <div class="card-title-row">
-                <span class="card-title"> Augustore 🏬 </span>
-                <span class="badge badge-completed">
-                  <span class="badge-dot"> </span>
-                  Completed
-                </span>
-              </div>
-              <p class="card-description">
-                A fully interactive command-line department store system with
-                categories, brands, a shopping cart, and payment processing.
-              </p>
-              <div class="tags">
-                <span class="tag"> Java </span>
-                <span class="tag"> OOP </span>
-                <span class="tag"> CLI </span>
-                <span class="tag"> Inheritance </span>
-              </div>
-            </div>
-            <button class="toggle-btn">&#8964;</button>
-          </div>
-          <div class="card-body">
-            <div class="section">
-              <p class="section-label">The Problem</p>
-              <p class="section-text">
-                Simulate a real department store experience entirely in the
-                terminal — with multiple brands, product sizes, stock tracking,
-                a cart, and two payment methods — using nothing but pure Java.
-              </p>
-            </div>
-            <div class="section">
-              <p class="section-label">What Was Built</p>
-              <p class="section-text">
-                A CLI shopping system with 6 product categories, 48 brands, and
-                hundreds of products — all navigable by number or by typing
-                words naturally.
-              </p>
-              <div class="features-grid">
-                <div class="feature-card">
-                  <div class="feature-icon">🏪</div>
-                  <div class="feature-title">6 Categories & 48 Brands</div>
-                  <div class="feature-desc">
-                    Clothing, Beauty, Home, Electronics, Sports, and Toys — each
-                    with multiple real-world brand stores.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">🗣️</div>
-                  <div class="feature-title">Natural Word Input</div>
-                  <div class="feature-desc">
-                    Type "shirt", "medium", "cart", or "cash" — the app
-                    understands plurals, aliases, and flexible phrasing.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">🛒</div>
-                  <div class="feature-title">Full Cart System</div>
-                  <div class="feature-desc">
-                    Add, remove, and adjust quantities with live stock tracking
-                    and subtotal calculation.
-                  </div>
-                </div>
-                <div class="feature-card">
-                  <div class="feature-icon">🧾</div>
-                  <div class="feature-title">Payment & Receipts</div>
-                  <div class="feature-desc">
-                    Pay by card or cash with change computation, and print
-                    itemized receipts for all sessions.
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section">
-              <p class="section-label">Outcome</p>
-              <p class="outcome-text">
-                A complete OOP-designed system demonstrating inheritance,
-                polymorphism, abstraction, and encapsulation — all in a single,
-                fully working Java program.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- ── END CARD 4 ── -->
       </section>
 
 
@@ -740,39 +446,47 @@
 
     <!-- JavaScript -->
     <script>
-      function toggleCard() {
-        document.getElementById("projectCard").classList.toggle("open");
-      }
-      function toggleCard2() {
-        document.getElementById("projectCard2").classList.toggle("open");
-      }
-      function toggleCard3() {
-        document.getElementById("projectCard3").classList.toggle("open");
-      }
-      function toggleCard4() {
-        document.getElementById("projectCard4").classList.toggle("open");
-      }
-      // ── Navbar fade on idle ──
-      const header = document.querySelector("header");
-      let hideTimer;
+      // Project cards now link to works.html
+// ── Navbar ──
+const header = document.querySelector("header");
+let lastY = window.scrollY;
+let hideTimer;
 
-      function showNav() {
-        header.classList.remove("nav-hidden");
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(() => {
-          header.classList.add("nav-hidden");
-        }, 2000);
-      }
+function showNav() {
+  header.classList.remove("nav-hidden");
+  clearTimeout(hideTimer);
+  if (window.scrollY > 60) {
+    hideTimer = setTimeout(() => header.classList.add("nav-hidden"), 2000);
+  }
+}
 
-      document.addEventListener("mousemove", (e) => {
-        if (e.clientY < 120) {
-          showNav();
-        }
-      });
-      hideTimer = setTimeout(() => {
-        header.classList.add("nav-hidden");
-      }, 2000);
+function hideNav() {
+  clearTimeout(hideTimer);
+  hideTimer = setTimeout(() => header.classList.add("nav-hidden"), 2000);
+}
 
+window.addEventListener("scroll", () => {
+  const currentY = window.scrollY;
+
+  if (currentY < 60) {
+    // #1 At the top — always stay
+    header.classList.remove("nav-hidden");
+    clearTimeout(hideTimer);
+  } else if (currentY < lastY) {
+    // #3 Scrolling up — show then fade
+    showNav();
+  } else if (currentY > lastY) {
+    // Scrolling down — start fade timer
+    hideNav();
+  }
+
+  lastY = currentY;
+}, { passive: true });
+
+// #4 Hover near navbar
+document.addEventListener("mousemove", (e) => {
+  if (e.clientY < 80) showNav();
+});
       // ── Active nav highlight ──
       const sections = document.querySelectorAll("section, footer");
       const navLinks = document.querySelectorAll("nav a");

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Works | Ron Syrel</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="works.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
+
+  <body class="works-page">
+
+    <header>
+      <a href="index.html" class="nav-name">Ron Syrel</a>
+      <nav>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#projects">Projects</a>
+  <a href="index.html#skills">Skills</a>
+  <a href="index.html#experience">Experience</a>
+  <a href="index.html#testimonials">Testimonials</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="works.html" class="nav-separator">My Works</a>
+</nav>
+      <a href="https://github.com/Noitaaaaaa" class="github-btn" target="_blank">Visit GitHub</a>
+    </header>
+
+   <main class="works-main">
+  <div class="works-container">
+
+    <div class="works-header">
+      <h1 class="works-title">My Works<span class="works-dot">.</span></h1>
+      <p class="works-subtitle">Projects built from scratch — real problems, real solutions.</p>
+    </div>
+
+    <!-- ── PROJECT 1: Nakachi Tracker ── -->
+    <article class="work-item" id="project-1">
+      <div class="work-card">
+        <div class="work-card-left">
+          <div class="work-intro-card">
+            <div class="work-title-row">
+              <h2 class="work-title">Nakachi Tracker</h2>
+              <span class="badge badge-deployed"><span class="badge-dot"></span>Deployed</span>
+            </div>
+            <p class="work-desc">
+              A full-featured desktop logistics management system built for a real trucking company.
+              Handles bookings, fleet, drivers, income, and expenses — all in one place. Built with
+              a real client, deployed in production, and still in active use.
+            </p>
+          </div>
+          <div class="work-tags-row">
+            <span class="tags-label">Tech Stack</span>
+            <div class="work-tags">
+              <span class="tag">Java</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Swing GUI</span>
+              <span class="tag">JDBC</span>
+              <span class="tag">Desktop App</span>
+            </div>
+          </div>
+          <a class="view-details-btn" onclick="toggleDetails(this)">&#x2197; View Details</a>
+        </div>
+        <div class="work-card-right">
+          <div class="media-viewer">
+  <div class="media-left">
+    <video controls>
+      <source src="Test.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="media-carousel">
+    <button class="carousel-arrow" id="prev-1">&#8249;</button>
+    <div class="carousel-track-wrap">
+      <div class="carousel-track" id="track-1">
+        <img class="media-thumb-img" src="NakachiImg1.png" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="NakachiImg2.png" alt="Profiles" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="NakachiImg3.png" alt="Fleet" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="NakachiImg4.png" alt="Reports" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="NakachiImg5.png" alt="Reports" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="NakachiImg6.png" alt="Aa" onclick="openLightbox(this)">
+      </div>
+    </div>
+    <button class="carousel-arrow" id="next-1">&#8250;</button>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="work-details">
+        <button class="details-toggle" onclick="toggleDetails(this)">
+          <span>Details</span>
+          <span class="details-arrow">&#8964;</span>
+        </button>
+        <div class="details-body">
+          <div class="work-section">
+            <p class="section-label">The Problem</p>
+            <p class="section-text">The trucking company tracked all operations on paper — no visibility into income, expenses, or fleet status in real time. Everything was scattered across documents and notebooks.</p>
+          </div>
+          <div class="work-section">
+            <p class="section-label">What Was Built</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">🧭</div>
+                <div class="feature-title">Dashboard</div>
+                <div class="feature-desc">Comprehensive overview of all logistics operations in real time.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">👤</div>
+                <div class="feature-title">Profiles</div>
+                <div class="feature-desc">Owners, clients, helpers, and drivers can view personal info and history.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <div class="feature-title">Fleet & Maintenance</div>
+                <div class="feature-desc">Manage the truck fleet and maintenance schedules in one view.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📁</div>
+                <div class="feature-title">Reports</div>
+                <div class="feature-desc">Compiled logistics reports pulled directly from live system data.</div>
+              </div>
+            </div>
+          </div>
+          <div class="work-section">
+            <p class="section-label">Outcome</p>
+            <p class="outcome-text">Forecasting entire operations and tracking income vs expenses became significantly easier. The client confirmed the system improved coordination and real-time visibility across the company.</p>
+          </div>
+          <div class="work-section work-section--testimonial">
+            <p class="section-label">Client Testimonial</p>
+            <blockquote class="work-quote">
+              "The program is very helpful to us. It tracks everything from our booking, our people, our income and our expenses. For a company who has several truck owners it helped us to see what is going-on real time."
+            </blockquote>
+            <p class="work-quote-author">— Susan Gajitos, Operations Manager, Nakachi Truck Rentals</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="work-divider"></div>
+
+    <!-- ── PROJECT 2: Personal Portfolio ── -->
+    <article class="work-item" id="project-2">
+      <div class="work-card">
+        <div class="work-card-left">
+          <div class="work-intro-card">
+            <div class="work-title-row">
+              <h2 class="work-title">Personal Portfolio</h2>
+              <span class="badge badge-deployed"><span class="badge-dot"></span>Deployed</span>
+            </div>
+            <p class="work-desc">
+              This portfolio — built entirely from scratch in pure HTML, CSS, and JavaScript.
+              No frameworks, no templates. Every layout decision, animation, and interaction is hand-written.
+            </p>
+          </div>
+          <div class="work-tags-row">
+            <span class="tags-label">Tech Stack</span>
+            <div class="work-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+          </div>
+          <a class="view-details-btn" onclick="toggleDetails(this)">&#x2197; View Details</a>
+        </div>
+        <div class="work-card-right">
+          <div class="media-viewer">
+            <div class="media-left">
+              <video controls>
+                <source src="PortfolioVid.mp4" type="video/mp4">
+              </video>
+            </div>
+           <div class="media-carousel">
+  <button class="carousel-arrow" id="prev-2">&#8249;</button>
+  <div class="carousel-track-wrap">
+    <div class="carousel-track" id="track-2">
+      <img class="media-thumb-img" src="PortfolioImg1.png" alt="Home" onclick="openLightbox(this)">
+      <img class="media-thumb-img" src="PortfolioImg2.png" alt="About" onclick="openLightbox(this)">
+      <img class="media-thumb-img" src="PortfolioImg3.png" alt="Works" onclick="openLightbox(this)">
+      <img class="media-thumb-img" src="PortfolioImg4.png" alt="Skills" onclick="openLightbox(this)">
+      <img class="media-thumb-img" src="por.png" alt="Contact" onclick="openLightbox(this)">
+    </div>
+  </div>
+  <button class="carousel-arrow" id="next-2">&#8250;</button>
+</div>
+          </div>
+        </div>
+      </div>
+      <div class="work-details">
+        <button class="details-toggle" onclick="toggleDetails(this)">
+          <span>Details</span>
+          <span class="details-arrow">&#8964;</span>
+        </button>
+        <div class="details-body">
+          <div class="work-section">
+            <p class="section-label">The Problem</p>
+            <p class="section-text">No single place to present work professionally. Projects existed as scattered files and repos with no context or story behind them.</p>
+          </div>
+          <div class="work-section">
+            <p class="section-label">What Was Built</p>
+            <div class="features-grid">
+              <div class="feature-card">
+                <div class="feature-icon">🧑‍💻</div>
+                <div class="feature-title">Hero Profile</div>
+                <div class="feature-desc">Two-column layout with profile photo, greeting, role, and bio.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🎠</div>
+                <div class="feature-title">Works Gallery</div>
+                <div class="feature-desc">Hover image cards linking to this detailed works page.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Custom Styling</div>
+                <div class="feature-desc">Hand-written CSS — warm earthy palette, Playfair Display, botanical background.</div>
+              </div>
+              <div class="feature-card">
+                <div class="feature-icon">📬</div>
+                <div class="feature-title">Contact Form</div>
+                <div class="feature-desc">Functional form via Formspree with send confirmation.</div>
+              </div>
+            </div>
+          </div>
+          <div class="work-section">
+            <p class="section-label">Outcome</p>
+            <p class="outcome-text">A clean, professional home for all work — built entirely by hand as a project in itself, demonstrating front-end fundamentals without any frameworks.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+</div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="lightbox-close" onclick="closeLightbox()">&#x2715;</span>
+  <button class="lightbox-prev" onclick="event.stopPropagation(); changeImage(-1)">&#8249;</button>
+  <button class="lightbox-next" onclick="event.stopPropagation(); changeImage(1)">&#8250;</button>
+  <img id="lightbox-img" class="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+  <div id="lightbox-thumbs" class="lightbox-thumbs"></div>
+</div>
+
+
+    <script>
+// ── Navbar ──
+const header = document.querySelector("header");
+let lastY = window.scrollY;
+let hideTimer;
+
+function showNav() {
+  header.classList.remove("nav-hidden");
+  clearTimeout(hideTimer);
+  if (window.scrollY > 60) {
+    hideTimer = setTimeout(() => header.classList.add("nav-hidden"), 2000);
+  }
+}
+
+function hideNav() {
+  clearTimeout(hideTimer);
+  hideTimer = setTimeout(() => header.classList.add("nav-hidden"), 2000);
+}
+
+window.addEventListener("scroll", () => {
+  const currentY = window.scrollY;
+
+  if (currentY < 60) {
+    // #1 At the top — always stay
+    header.classList.remove("nav-hidden");
+    clearTimeout(hideTimer);
+  } else if (currentY < lastY) {
+    // #3 Scrolling up — show then fade
+    showNav();
+  } else if (currentY > lastY) {
+    // Scrolling down — start fade timer
+    hideNav();
+  }
+
+  lastY = currentY;
+}, { passive: true });
+
+// #4 Hover near navbar
+document.addEventListener("mousemove", (e) => {
+  if (e.clientY < 80) showNav();
+});
+  // ── Scroll reveal ──
+  const items = document.querySelectorAll(".work-item");
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("revealed");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  items.forEach(item => revealObserver.observe(item));
+
+  // ── Details toggle ──
+  function toggleDetails(el) {
+  const item = el.closest('.work-item');
+  const details = item.querySelector('.work-details');
+  details.classList.toggle('open');
+
+  if (details.classList.contains('open')) {
+    setTimeout(() => {
+      details.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+  }
+}
+
+  // ── Lightbox ──
+  let currentImages = [];
+  let currentIndex = 0;
+
+  function openLightbox(img) {
+  event.stopPropagation();
+  const track = img.closest('.carousel-track');
+  currentImages = [...track.querySelectorAll('.media-thumb-img')];
+  currentIndex = currentImages.indexOf(img);
+  renderLightbox();
+  document.getElementById('lightbox').classList.add('open');
+}
+
+  function renderLightbox() {
+    document.getElementById('lightbox-img').src = currentImages[currentIndex].src;
+    const thumbsEl = document.getElementById('lightbox-thumbs');
+    thumbsEl.innerHTML = '';
+    currentImages.forEach((img, i) => {
+      const t = document.createElement('img');
+      t.src = img.src;
+      t.className = 'lightbox-thumb' + (i === currentIndex ? ' active' : '');
+      t.onclick = (e) => { e.stopPropagation(); currentIndex = i; renderLightbox(); };
+      thumbsEl.appendChild(t);
+    });
+  }
+
+  function changeImage(dir) {
+    currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length;
+    renderLightbox();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') changeImage(1);
+    if (e.key === 'ArrowLeft') changeImage(-1);
+  });
+
+// ── Carousel ──
+document.querySelectorAll('.media-viewer').forEach((viewer, i) => {
+  const n = i + 1;
+  const track = viewer.querySelector('.carousel-track');
+  const prev = viewer.querySelector('.carousel-arrow:first-child');
+  const next = viewer.querySelector('.carousel-arrow:last-child');
+  if (!track || !prev || !next) return;
+
+  let index = 0;
+
+  function getVisible() {
+    const wrapWidth = track.parentElement.offsetWidth;
+    const thumbWidth = 160 + 8; // width + gap
+    return Math.floor(wrapWidth / thumbWidth);
+  }
+
+  function totalImages() {
+    return track.querySelectorAll('.media-thumb-img').length;
+  }
+
+  function update() {
+    const thumbWidth = 160 + 8;
+    track.style.transform = `translateX(-${index * thumbWidth}px)`;
+    prev.classList.toggle('hidden', index === 0);
+    next.classList.toggle('hidden', index + getVisible() >= totalImages());
+  }
+
+  prev.addEventListener('click', () => { index = Math.max(0, index - 1); update(); });
+  next.addEventListener('click', () => { index = Math.min(totalImages() - getVisible(), index + 1); update(); });
+
+  update();
+});
+
+</script>
+  </body>
+</html>
