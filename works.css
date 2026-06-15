@@ -443,6 +443,11 @@
   transition: opacity 0.2s, transform 0.2s, border-color 0.2s;
 }
 
+.media-thumb-img.portrait {
+  object-fit: contain;
+  background: black;
+}
+
 .media-thumb-img:hover {
   opacity: 0.85;
   transform: scale(1.02);

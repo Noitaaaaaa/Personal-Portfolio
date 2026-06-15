@@ -259,14 +259,28 @@
           <div class="media-viewer">
   <div class="media-left">
     <video controls>
-      <source src="WIP.mp4" type="video/mp4">
+      <source src="Journibitesvideo.mp4" type="video/mp4">
     </video>
   </div>
   <div class="media-carousel">
     <button class="carousel-arrow" id="prev-1">&#8249;</button>
     <div class="carousel-track-wrap">
       <div class="carousel-track" id="track-1">
-        <img class="media-thumb-img" src="WIP.png" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg1.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg2.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg3.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg4.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg5.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg6.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg7.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg8.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg9.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg10.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg11.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg12.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg13.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg14.jpg" alt="Dashboard" onclick="openLightbox(this)">
+        <img class="media-thumb-img" src="JourniBitesImg15.jpg" alt="Dashboard" onclick="openLightbox(this)">
       </div>
     </div>
     <button class="carousel-arrow" id="next-1">&#8250;</button>
@@ -482,6 +496,20 @@ document.querySelectorAll('.media-viewer').forEach((viewer, i) => {
   next.addEventListener('click', () => { index = Math.min(totalImages() - getVisible(), index + 1); update(); });
 
   update();
+});
+
+document.querySelectorAll('.media-thumb-img').forEach(img => {
+  function checkOrientation() {
+    if (img.naturalHeight > img.naturalWidth) {
+      img.classList.add('portrait');
+    }
+  }
+
+  if (img.complete) {
+    checkOrientation();
+  } else {
+    img.addEventListener('load', checkOrientation);
+  }
 });
 
 </script>
