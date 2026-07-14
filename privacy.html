@@ -145,6 +145,16 @@
       margin-top: 3px;
     }
 
+    .policy-section a {
+      color: #856a5d;
+      text-decoration: underline;
+      text-decoration-color: rgba(133, 106, 93, 0.4);
+    }
+
+    .policy-section a:hover {
+      text-decoration-color: #856a5d;
+    }
+
     /* ── Contact card ── */
     .contact-card {
       background: #60463b;
@@ -209,13 +219,13 @@
   <main>
     <p class="page-eyebrow">App Privacy</p>
     <h1 class="page-title">JourniBites<span>.</span></h1>
-    <p class="page-meta">Privacy Policy — Last updated: June 2025</p>
+    <p class="page-meta">Privacy Policy — Last updated: July 2026</p>
 
     <div class="divider"></div>
 
     <div class="policy-section">
       <h2>Overview</h2>
-      <p>JourniBites is a personal food journal app for Android. This policy explains what data the app accesses, how it is used, and how it is stored. Your privacy is taken seriously — the app is built for personal use and does not collect or share your data with third parties.</p>
+      <p>JourniBites is a personal food journal app for Android. This policy explains what data the app accesses, how it is used, and how it is shared with third-party services such as advertising and billing providers. The app is built primarily for personal use — your journal entries themselves are never uploaded to our own servers — but JourniBites does display ads and offer an in-app purchase, both of which involve data processing by Google as described below.</p>
     </div>
 
     <div class="policy-section">
@@ -224,29 +234,44 @@
       <ul>
         <li>Camera — to take photos of food and restaurants for your journal entries</li>
         <li>Photo library / storage — to attach existing photos to entries</li>
-        <li>Location (GPS) — to log where you ate and display places on a map</li>
+        <li>Location (GPS) — to log where you ate, let you pin a restaurant's location on a map, and display your saved places on the Map View</li>
       </ul>
-      <p>These permissions are only used when you actively use those features. You can deny them without affecting the core journaling functionality.</p>
+      <p>These permissions are only used when you actively use those features. You can deny them without affecting the core journaling functionality, though location-based features (pinning a restaurant, Map View) won't work without location access.</p>
     </div>
 
     <div class="policy-section">
       <h2>How Data Is Stored</h2>
-      <p>All data you create in JourniBites — journal entries, photos, ratings, notes, and location records — is stored locally on your device using SQLite. Nothing is uploaded to external servers or cloud services unless you explicitly enable a sync feature in a future version.</p>
+      <p>Your journal entries, photos, ratings, notes, and any restaurant locations you save are stored locally on your device using SQLite. This data is never uploaded to servers we operate, and is not shared with any third party except as described in the Advertising & Third-Party Services section below. Uninstalling the app removes all locally stored data from your device.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Advertising & Third-Party Services</h2>
+      <p>JourniBites uses <strong>Google AdMob</strong> (the Google Mobile Ads SDK) to display banner and interstitial ads, and <strong>Google Play Billing</strong> to process the one-time "Remove Ads" in-app purchase.</p>
+      <p>To provide, measure, and personalize ads, the Google Mobile Ads SDK may collect and share certain data with Google, which can include your device's advertising ID, IP address, general device information, app usage and interaction data, and — where relevant to ad delivery — approximate location. This data is processed by Google under its own privacy policy, not stored by JourniBites.</p>
+      <p>If you purchase "Remove Ads," ads are disabled for that installation going forward. Purchase transactions themselves are handled entirely by Google Play Billing; JourniBites does not see or store your payment details.</p>
+      <p>For details on how Google collects and uses data through its advertising products, see Google's <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Ads Privacy & Terms</a>.</p>
+    </div>
+
+    <div class="policy-section">
+      <h2>Your Ad Choices & Consent</h2>
+      <p>If you are located in the European Economic Area, the United Kingdom, or Switzerland, JourniBites will show a consent message the first time you open the app, letting you choose whether to allow personalized advertising, in line with GDPR and the UK's data protection rules. If you decline, you'll still see ads, but they won't be personalized based on your activity.</p>
+      <p>If you are a resident of a U.S. state with applicable privacy legislation (such as California's CCPA), the same consent tool lets you limit the use of your information for targeted advertising.</p>
+      <p>You can manage or reset your ad personalization choices at any time through your device's Google <a href="https://adssettings.google.com" target="_blank" rel="noopener">Ads Settings</a>, or remove ads from JourniBites entirely via the one-time purchase in Menu → In App Purchases.</p>
     </div>
 
     <div class="policy-section">
       <h2>Data Sharing</h2>
-      <p>We do not sell, rent, share, or transmit your personal data to any third party. JourniBites does not contain ads, analytics SDKs, or tracking of any kind.</p>
+      <p>We do not sell your personal information. We do not otherwise share, rent, or transmit your journal entries, photos, or saved locations to any third party. The only data sharing that occurs is the device and usage data described above, which is shared with Google as a necessary part of displaying ads and processing in-app purchases through their SDKs.</p>
     </div>
 
     <div class="policy-section">
       <h2>Data Deletion</h2>
-      <p>You can delete any journal entry, photo, or record at any time from within the app. Uninstalling the app removes all locally stored data from your device.</p>
+      <p>You can delete any journal entry, photo, or record at any time from within the app. Uninstalling the app removes all locally stored data from your device. Data already processed by Google's advertising services (such as ad interaction data) is retained and deleted according to Google's own data retention policies, not JourniBites'.</p>
     </div>
 
     <div class="policy-section">
       <h2>Children's Privacy</h2>
-      <p>JourniBites is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+      <p>JourniBites is not directed at children under 13, and ads shown in the app are not configured for child-directed treatment. We do not knowingly collect personal information from children.</p>
     </div>
 
     <div class="policy-section">
